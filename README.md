@@ -1,5 +1,20 @@
 # tgscrack
-TGE_REP cracker written in Golang.  Wrote it as my first excercise in learning Go.
+Kerberos TGS_REP cracker written in Golang.  Wrote it as my first excercise in learning Go.
+
+#Usage
+Extract the encrypted service ticket parts from the TGS_REP message
+```
+python extractServiceTicketParts.py ticket.kirbi
+```
+Crack away: 
+```
+tgscrack -hashfile hashes.txt -wordlist rockyou.txt
+```
+# Building from source
+```
+go get github.com/leechristensen/tgscrack
+go install github.com/leechristensen/tgscrack
+```
 # Credits
 Tim Medin(@timmedin) for his work on Kerberoast
  - https://github.com/nidem/kerberoast
